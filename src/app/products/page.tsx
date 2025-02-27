@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 
 const ProductPage = () => {
   return (
-    <div>
-      <h1 className="text-red-500">product</h1>
+    <div className="text-wrap p-2">
+      <h1 className="p-2 text-red-500">product</h1>
       <Button>Click</Button>
     </div>
   );
