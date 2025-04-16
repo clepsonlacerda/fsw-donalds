@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/sheet";
 import { useContext } from "react";
 import { CartContext } from "../contect/cart";
+import CartProductItem from "../[productId]/components/cart-product-item";
 
 const CartSheet = () => {
 
@@ -15,16 +16,16 @@ const CartSheet = () => {
 
   return ( 
     <Sheet open={isOpen} onOpenChange={toggleCart}>
-        <SheetContent>
+        <SheetContent className="w-[80%]">
           <SheetHeader>
-            <SheetTitle></SheetTitle>
+            <SheetTitle className="text-left">Sacola</SheetTitle>
             <SheetDescription></SheetDescription>
           </SheetHeader>
+          <div className="py-5">
           {products.map((product) => (
-            <h1 key={product.id}>
-              {product.name} - {product.quantity}
-            </h1>
+            <CartProductItem key={product.id} product={product} />
           ))}
+          </div>
         </SheetContent>
       </Sheet>
    );
