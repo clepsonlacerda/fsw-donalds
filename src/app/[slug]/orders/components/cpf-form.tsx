@@ -34,7 +34,7 @@ type FormSchema = z.infer<typeof formSchema>;
   })
 
   const onSubmit = (data: FormSchema) => {
-    router.push(`${parhname}?cpf=${removeCpfPunctuation(data.cpf)}`);
+    router.replace(`${parhname}?cpf=${removeCpfPunctuation(data.cpf)}`);
   }
 
   const handleCancel = () => {
